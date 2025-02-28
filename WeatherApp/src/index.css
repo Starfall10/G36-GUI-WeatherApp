@@ -8,7 +8,12 @@
 }
 
 .app {
-  background: linear-gradient(247deg, #355bbc -0.72%, #152859 100%);
+  background: linear-gradient(
+    247deg,
+    #355bbc -0.72%,
+    #233e82 33.9%,
+    #112148 100%
+  );
   height: 100vh;
 }
 

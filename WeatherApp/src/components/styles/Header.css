@@ -26,11 +26,13 @@
 .darkModeToggle img {
   width: 2rem;
   height: 2rem;
+  filter: brightness(0.3);
 }
 
 .searchBar {
+  margin-left: 2rem;
   padding-left: 2rem;
-  width: 90%;
+  width: 87%;
   height: 4rem;
   flex-shrink: 0;
   border-radius: 1.25rem;
