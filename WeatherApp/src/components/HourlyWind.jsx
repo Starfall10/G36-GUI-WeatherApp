@@ -1,8 +1,47 @@
 import React from "react";
 import "./styles/HourlyWind.css";
+import WeatherIcon from "./WeatherIcon";
 
 const HourlyWind = () => {
-  return <div className="hourlyWind">HourlyWind</div>;
+  return (
+    <div className="windContainer">
+      <div className="hourlyWind">
+        <h2>Hourly Windspeed</h2>
+        <div className="content">
+          <div className="card">
+            <WeatherIcon condition="wind" size={70} />
+            <div className="speed">4 MPH</div>
+            <div className="time">Now</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="wind" size={70} />
+            <div className="speed">4 MPH</div>
+            <div className="time">12:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="wind" size={70} />
+            <div className="speed">5 MPH</div>
+            <div className="time">14:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="wind" size={70} />
+            <div className="speed">5 MPH</div>
+            <div className="time">15:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="wind" size={70} />
+            <div className="speed">6 MPH</div>
+            <div className="time">16:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="wind" size={70} />
+            <div className="speed">6 MPH</div>
+            <div className="time">16:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HourlyWind;
