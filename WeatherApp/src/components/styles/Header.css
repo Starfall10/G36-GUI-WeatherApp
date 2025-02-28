@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+
   align-items: center;
   width: 50%;
   height: 10vh;
@@ -30,7 +31,6 @@
 }
 
 .searchBar {
-  margin-left: 2rem;
   padding-left: 2rem;
   width: 87%;
   height: 4rem;

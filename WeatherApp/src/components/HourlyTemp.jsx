@@ -1,8 +1,47 @@
 import React from "react";
 import "./styles/HourlyTemp.css";
+import WeatherIcon from "./WeatherIcon";
 
 const HourlyTemp = () => {
-  return <div className="hourlyTemp">HourlyTemp</div>;
+  return (
+    <div className="tempContainer">
+      <div className="hourlyTemp">
+        <h2>Hourly Forecast</h2>
+        <div className="content">
+          <div className="card">
+            <WeatherIcon condition="cloudy" size={70} />
+            <div className="temp">20°C</div>
+            <div className="time">Now</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="cloudy" size={70} />
+            <div className="temp">21°C</div>
+            <div className="time">12:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="foggy" size={70} />
+            <div className="temp">22°C</div>
+            <div className="time">14:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="foggy" size={70} />
+            <div className="temp">22°C</div>
+            <div className="time">15:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="tornado" size={70} />
+            <div className="temp">24°C</div>
+            <div className="time">16:00</div>
+          </div>
+          <div className="card">
+            <WeatherIcon condition="thunderstorm" size={70} />
+            <div className="temp">24°C</div>
+            <div className="time">16:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HourlyTemp;

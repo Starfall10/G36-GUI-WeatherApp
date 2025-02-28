@@ -4,13 +4,25 @@ import foggy from "../assets/foggy.png";
 import heavyRain from "../assets/heavy-rain.png";
 import snow from "../assets/snow.png";
 import sunny from "../assets/sun.png";
+import thunderstorm from "../assets/thunderstorm.png";
+import tornado from "../assets/tornado.png";
+import wind from "../assets/wind.png";
+import humidity from "../assets/drop.png";
+import danger from "../assets/exclamation.png";
+import graph from "../assets/analytics.png";
 
 const weatherImages = {
   cloudy,
   foggy,
-  "heavy-rain": heavyRain,
+  heavyRain,
   snow,
   sunny,
+  thunderstorm,
+  tornado,
+  wind,
+  humidity,
+  danger,
+  graph,
 };
 
 const WeatherIcon = ({ condition, size = 64 }) => {
