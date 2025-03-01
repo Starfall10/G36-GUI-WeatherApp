@@ -1,16 +1,15 @@
 import React from "react";
 import "./styles/Header.css";
-import moonb from "../assets/moonb.png";
-import searchIcon from "../assets/search.png";
+import WeatherIcon from "./WeatherIcon";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="darkModeToggle">
-        <img src={moonb} alt="moon" />
+        <WeatherIcon condition="moonb" size="clamp(1rem, 50%, 2rem)" />
       </div>
       <div className="searchBar">
-        <img src={searchIcon} alt="searchIcon" />
+        <WeatherIcon condition="search" size="clamp(1rem, 50%, 2rem)" />
         <input
           type="text"
           className="searchField"
