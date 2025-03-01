@@ -1,4 +1,6 @@
 import React from "react";
+import moonb from "../assets/moonb.png";
+import search from "../assets/search.png";
 import cloudy from "../assets/cloudy.png";
 import foggy from "../assets/foggy.png";
 import heavyRain from "../assets/heavy-rain.png";
@@ -23,12 +25,21 @@ const weatherImages = {
   humidity,
   danger,
   graph,
+  moonb,
+  search,
 };
 
-const WeatherIcon = ({ condition, size = 64 }) => {
+const WeatherIcon = ({ condition, size = "10%" }) => {
   const imageSrc = weatherImages[condition] || sunny; // Default to sunny if not found
 
-  return <img src={imageSrc} alt={condition} width={size} height={size} />;
+  return (
+    <img
+      src={imageSrc}
+      alt={condition}
+      className="object-contain"
+      style={{ width: size, height: "auto" }}
+    />
+  );
 };
 
 export default WeatherIcon;

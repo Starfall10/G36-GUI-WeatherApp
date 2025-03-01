@@ -43,14 +43,13 @@
 }
 
 .speed {
-  padding-top: 1rem;
   color: white;
-  font-size: 2rem;
+  font-size: clamp(1rem, 1.5vw, 1.7rem);
   font-weight: 500;
 }
 
 .time {
   color: white;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 2vw, 1rem);
   font-weight: 500;
 }
