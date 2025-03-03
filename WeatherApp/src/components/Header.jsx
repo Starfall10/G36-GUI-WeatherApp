@@ -6,7 +6,7 @@ const Header = ({ onSearch }) => {
   const inputRef = useRef();
 
 
-  // Trigger search on Enter key press
+  // Trigger search by pressing Enter key
   const handleKeyPress = (event) => {
       if (event.key === "Enter" && inputRef.current) {
         onSearch(inputRef.current.value);
