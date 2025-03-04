@@ -4,18 +4,18 @@ import HourlyTemp from "./HourlyTemp";
 import HourlyWind from "./HourlyWind";
 import "./styles/Mid.css";
 
-const Mid = () => {
+const Mid = ({ city, weatherData }) => {
   return (
     <div className="midContainer">
       <div className="div1">
-        <Main />
+        <Main city={city} weatherData={weatherData} />
       </div>
       <div className="div2">
         <div className="div3">
-          <HourlyTemp />
+          <HourlyTemp city={city} weatherData={weatherData}/>
         </div>
         <div className="div4">
-          <HourlyWind />
+          <HourlyWind city={city} weatherData ={weatherData}/>
         </div>
       </div>
     </div>
@@ -23,3 +23,4 @@ const Mid = () => {
 };
 
 export default Mid;
+
