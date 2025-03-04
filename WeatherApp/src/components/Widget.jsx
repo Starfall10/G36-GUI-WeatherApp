@@ -12,7 +12,6 @@ const Widget = ({ city, weatherData }) => {
                   <WeatherIcon condition="graph" size={140} />
                   <WeatherIcon condition="graph" size={140} />
                   <WeatherIcon condition="graph" size={140} />
-                  <WeatherIcon condition="graph" size={140} />
                 </div>
            </div>
         <div className="extra">
