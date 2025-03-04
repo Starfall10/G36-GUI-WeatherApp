@@ -30,6 +30,7 @@ const App = () => {
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
         precipitation: data.rain ? data.rain["1h"] || 0 : 0,
+        timezone_offset: data.timezone || 0, // Fetches timezone offset from API
       });
 
       setCity(data.name);
@@ -39,7 +40,23 @@ const App = () => {
     }
   };
 
-//   Fetch weather data when the app loads
+    // Function to determine background image
+    const getBackgroundImage = () => {
+      if (!weatherData) return "cloudy.jpg"; // Default image
+
+      const temp = weatherData.temperature;
+      const condition = weatherData.weatherCondition.toLowerCase();
+
+      if (condition.includes("rain")) return "rain.jpg"; // Show rain background
+      if (condition.includes("snow")) return "snow.jpg"; // Show snow background
+
+      // If no rain/snow, change based on temperature
+      if (temp >= 30) return "hot.jpg"; // Hot weather image
+      if (temp >= 15) return "warm.jpg"; // Warm weather image
+      return "cold.jpg"; // Cold weather image
+    };
+
+//Fetch weather data when the app loads
   useEffect(() => {
     fetchWeather(city);
   }, []);
