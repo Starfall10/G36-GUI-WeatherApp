@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./styles/HourlyTemp.css";
 import WeatherIcon from "./WeatherIcon";
+import "./styles/darkmode.css";
 
 const HourlyTemp = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  useEffect(() => {
+  document.body.className = isDarkMode ? "dark-mode" : "light-mode";
+  }, [isDarkMode]);
+
   return (
     <div className="tempContainer">
       <div className="hourlyTemp">

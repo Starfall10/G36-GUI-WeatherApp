@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./styles/Main.css";
 import WeatherIcon from "./WeatherIcon";
+import "./styles/darkmode.css";
 
 const Main = () => {
+  const [isDarkMode] = useState(false);
+    
+  useEffect(() => {
+  document.body.className = isDarkMode ? "dark-mode" : "light-mode";}, [isDarkMode]);
+  
   return (
     <div className="main_container">
       <div className="main">

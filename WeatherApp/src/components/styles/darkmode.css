@@ -1,0 +1,104 @@
+:root{
+    --light-bg:linear-gradient(219deg,#3764d7 13.68%, #2a4ca4 50%,#1d3571 82.86%);
+    --light-text:#FFFFFF;
+    --dark-bg:linear-gradient(219deg,#010614,13.68%, #1A2747 30%, #1D3571 80%);
+    --dark-text: #beb3b3;
+}
+
+    .dark-mode{
+        background: var(--dark-bg);
+        color: var(--dark-text);
+    }
+
+    .dark-mode .darkModeToggle,
+    .dark-mode .searchBar{
+        background: var(--dark-bg);
+        color: var(--dark-text);
+        border-color: var(--dark-text);
+    }
+
+    .dark-mode .searchBar input{
+        color: var(--dark-text);
+    }
+
+    .dark-mode ::placeholder{
+        color: var(--dark-text);
+    }
+
+    .dark-mode .content .card{
+        background: var(--dark-bg);
+        color: var(--dark-text);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dark-mode .main{
+        background: var(--dark-bg);
+        color: var(--dark-text);
+        border-color: var(--dark-text);
+        height: 100%;
+        width: 100%;
+        border-radius: 1.25rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dark-mode .midContainer{
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+        transition: all 0.1s ease-in-out;
+    }
+
+    .dark-mode .graph_container{
+        background: var(--dark-bg);
+        color: var(--dark-text);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dark-mode .extraCard{
+        background: var(--dark-bg);
+        color: var(--dark-text);
+    }
+
+    .dark-mode .widget{
+        background: var(--dark-bg);
+        color: var(--dark-text);
+    }
+
+    .dark-mode .temp{
+        color: var(--dark-text);
+    }
+
+    .dark-mode .time{
+        color: var(--dark-text);
+    }
+
+    .dark-mode .speed{
+        color: var(--dark-text);
+    }
+
+    .dark-mode .extra p,
+    .dark-mode .extra h1{
+        color: var(--dark-bg);
+    }
+
+    .dark-mode .hourlyTemp{
+        background: linear-gradient(#010614,0%, #1A2747 52%, #1D3571 100%);
+
+    }
+    .dark-mode .hourlyWind {
+        background: linear-gradient(#010614,0%, #1A2747 52%, #1D3571 100%);
+    }
+
+    .dark-mode .windContainer h2,
+    .dark-mode .tempContainer h2 {
+        color: var(--dark-bg);
+    }
+
+    .dark-mode .app{
+        background:linear-gradient(
+            247deg,
+            #000000 0%,
+            #010614 33.9%,
+            #1D3571 100%
+          );
+          height: 100vh;
+    }
