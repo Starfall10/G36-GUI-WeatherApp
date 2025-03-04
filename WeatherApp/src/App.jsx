@@ -29,7 +29,6 @@ const fetchWeather = async (city) => {
 
     const openMeteoData = await openMeteoRes.json();
 
-    console.log('Open-Meteo Data:', openMeteoData); // Log Open-Meteo data for debugging
 
     // Combine data from both APIs
     setWeatherData({
