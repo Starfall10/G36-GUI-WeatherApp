@@ -4,59 +4,56 @@ import Mid from "./components/Mid";
 import Widget from "./components/Widget";
 
 const App = () => {
-  const [city, setCity] = useState("Florida"); //Default city
+  const [city, setCity] = useState("Florida"); // Default city
   const [weatherData, setWeatherData] = useState(null);
 
-  // Function to fetch weather data
-  const fetchWeather = async (city) => {
-    if (!city.trim()) {
-      alert("Please enter a city name");
-      return;
-    }
-    try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_KEY}`;
-      const response = await fetch(url);
-      const data = await response.json();
+const fetchWeather = async (city) => {
+  if (!city.trim()) {
+    alert("Please enter a city name");
+    return;
+  }
 
-      if (!response.ok) {
-        alert(data.message);
-        return;
-      }
+  try {
+    // Fetch current weather data from OpenWeatherMap
+    const openWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_KEY}`;
+    const openWeatherRes = await fetch(openWeatherURL);
+    if (!openWeatherRes.ok) throw new Error("Failed to fetch weather data");
 
-      setWeatherData({
-        temperature: Math.floor(data.main.temp),
-        high: Math.floor(data.main.temp_max),
-        low: Math.floor(data.main.temp_min),
-        humidity: data.main.humidity,
-        windSpeed: data.wind.speed,
-        precipitation: data.rain ? data.rain["1h"] || 0 : 0,
-        timezone_offset: data.timezone || 0, // Fetches timezone offset from API
-      });
+    const openWeatherData = await openWeatherRes.json();
+    const { lat, lon } = openWeatherData.coord;
 
-      setCity(data.name);
-    } catch (error) {
-      console.error("Error fetching weather data:", error);
-      setWeatherData(null);
-    }
-  };
+    // Fetch hourly data from Open-Meteo
+    const openMeteoURL = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,wind_speed_10m&timezone=auto`;
+    const openMeteoRes = await fetch(openMeteoURL);
+    if (!openMeteoRes.ok) throw new Error("Failed to fetch hourly forecast");
 
-    // Function to determine background image
-    const getBackgroundImage = () => {
-      if (!weatherData) return "cloudy.jpg"; // Default image
+    const openMeteoData = await openMeteoRes.json();
 
-      const temp = weatherData.temperature;
-      const condition = weatherData.weatherCondition.toLowerCase();
+    console.log('Open-Meteo Data:', openMeteoData); // Log Open-Meteo data for debugging
 
-      if (condition.includes("rain")) return "rain.jpg"; // Show rain background
-      if (condition.includes("snow")) return "snow.jpg"; // Show snow background
+    // Combine data from both APIs
+    setWeatherData({
+      temperature: Math.floor(openWeatherData.main.temp),
+      high: Math.floor(openWeatherData.main.temp_max),
+      low: Math.floor(openWeatherData.main.temp_min),
+      humidity: openWeatherData.main.humidity,
+      windSpeed: openWeatherData.wind.speed,
+      precipitation: openWeatherData.rain ? openWeatherData.rain["1h"] || 0 : 0,
+      timezoneOffset: openWeatherData.timezone || 0,
+      hourlyTemperature: openMeteoData.hourly.temperature_2m,
+      hourlyWindSpeed: openMeteoData.hourly.wind_speed_10m,
+      hourlyTime: openMeteoData.hourly.time,
+    });
 
-      // If no rain/snow, change based on temperature
-      if (temp >= 30) return "hot.jpg"; // Hot weather image
-      if (temp >= 15) return "warm.jpg"; // Warm weather image
-      return "cold.jpg"; // Cold weather image
-    };
+    setCity(openWeatherData.name);
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
+    alert("Failed to fetch weather data. Please try again.");
+    setWeatherData(null);
+  }
+};
 
-//Fetch weather data when the app loads
+  // Fetch weather data when the app loads
   useEffect(() => {
     fetchWeather(city);
   }, []);
