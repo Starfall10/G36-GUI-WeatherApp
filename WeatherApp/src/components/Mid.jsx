@@ -1,27 +1,28 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Main from "./Main";
 import HourlyTemp from "./HourlyTemp";
 import HourlyWind from "./HourlyWind";
 import "./styles/Mid.css";
 import "./styles/darkmode.css";
 
-const Mid = () => {
+const Mid = ({ city, weatherData }) => {
   const [isDarkMode] = useState(false);
-    
+
   useEffect(() => {
-  document.body.className = isDarkMode ? "dark-mode" : "light-mode";}, [isDarkMode]);
-  
+    document.body.className = isDarkMode ? "dark-mode" : "light-mode";
+  }, [isDarkMode]);
+
   return (
     <div className="midContainer">
       <div className="div1">
-        <Main />
+        <Main city={city} weatherData={weatherData} />
       </div>
       <div className="div2">
         <div className="div3">
-          <HourlyTemp />
+          <HourlyTemp city={city} weatherData={weatherData} />
         </div>
         <div className="div4">
-          <HourlyWind />
+          <HourlyWind city={city} weatherData={weatherData} />
         </div>
       </div>
     </div>
