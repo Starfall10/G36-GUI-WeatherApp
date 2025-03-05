@@ -6,10 +6,11 @@ const Main = ({ city, weatherData }) => {
   const [localTime, setLocalTime] = useState("");
 
   useEffect(() => {
-    if (weatherData && weatherData.timezone_offset !== undefined) {
+    if (weatherData && weatherData.timezoneOffset !== undefined) {
       const updateTime = () => {
-        const now = new Date();
-        const localTime = new Date(now.getTime() + weatherData.timezone_offset * 1000);
+        const nowUTC = new Date().getTime();
+        const localTimestamp = nowUTC + weatherData.timezoneOffset * 1000;
+        const localTimeDate = new Date(localTimestamp);
 
         const options = {
           weekday: "short",
@@ -20,16 +21,17 @@ const Main = ({ city, weatherData }) => {
           minute: "2-digit",
           hour12: true
         };
-          let formattedTime = new Intl.DateTimeFormat("en-US", options).format(localTime);
 
-          formattedTime = formattedTime.replace(" at", " ");
+        let formattedTime = new Intl.DateTimeFormat("en-US", options).format(localTimeDate);
+        formattedTime = formattedTime.replace(" at", " "); // Format cleanup
 
-          setLocalTime(formattedTime);
+        setLocalTime(formattedTime);
       };
 
       updateTime();
-      const interval = setInterval(updateTime, 1000); // Update time every second
-      return () => clearInterval(interval); // Cleanup on unmount
+      const interval = setInterval(updateTime, 1000);
+
+      return () => clearInterval(interval);
     }
   }, [weatherData]);
 
