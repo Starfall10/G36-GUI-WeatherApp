@@ -10,7 +10,7 @@ const HourlyWind = ({ weatherData }) => {
   // Get current UTC time and adjust to city's local time + 1 hour
   const nowUTC = new Date();
   const localTime = new Date(nowUTC.getTime() + weatherData.timezoneOffset * 1000);
-  const currentHour = localTime.getHours() + 1; 
+  const currentHour = localTime.getHours() + 1;
 
   // Find the closest hourly forecast index
   const startIndex = weatherData.hourlyTime.findIndex((time) => {
