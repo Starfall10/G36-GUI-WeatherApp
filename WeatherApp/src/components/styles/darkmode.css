@@ -102,3 +102,7 @@
           );
           height: 100vh;
     }
+
+    .darkModeToggle :hover{
+        transform: scale(1.1);
+    }
