@@ -4,7 +4,7 @@ import Mid from "./components/Mid";
 import Widget from "./components/Widget";
 
 const App = () => {
-  const [city, setCity] = useState("Florida"); // Default city
+  const [city, setCity] = useState("London");
   const [weatherData, setWeatherData] = useState(null);
 
 const fetchWeather = async (city) => {
