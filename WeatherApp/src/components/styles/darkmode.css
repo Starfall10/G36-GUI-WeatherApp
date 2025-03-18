@@ -8,6 +8,7 @@
     .dark-mode{
         background: var(--dark-bg);
         color: var(--dark-text);
+        
     }
 
     .dark-mode .darkModeToggle,
