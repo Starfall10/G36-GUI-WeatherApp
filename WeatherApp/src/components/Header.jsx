@@ -37,7 +37,7 @@ const Header = ({ onSearch }) => {
           ref={inputRef}
           type="text"
           className="searchField"
-          placeholder="Enter Location, Postcode"
+          placeholder="Enter Location"
           onKeyPress={handleKeyPress}
         />
       </div>
