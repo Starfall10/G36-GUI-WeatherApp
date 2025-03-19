@@ -1,14 +1,14 @@
 
 .header {
   display: flex;
-  justify-content: space-around;
-
+  justify-content: space-between;
   align-items: center;
   width: 50%;
   height: 10%;
 }
 
 .darkModeToggle {
+  position: relative;
   width: 3.8125rem;
   height: 4rem;
   flex-shrink: 0;
@@ -23,6 +23,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease;
+  overflow: hidden;
+
+}
+
+.darkModeToggle::before{
+  content: '';
+  position:absolute;
+  top: -1%;
+  left: -10%;
+  width: 200%;
+  height: 90%;
+  align-items: center;
+  background:linear-gradient(
+  0deg,
+  transparent,
+  transparent 10%,
+  rgba(147, 221, 221, 0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.darkModeToggle:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 100px (0, 255,255, 0.5);
+}
+.darkModeToggle:hover::before{
+  opacity: 1;
+  transform: rotate(-45deg) translateY(90%);
 }
 
 .darkModeToggle img {
@@ -64,5 +94,54 @@
 }
 
 ::placeholder {
+  color: #a19f9f;
+}
+
+.change{
+  position: absolute;
+  right: 20px;
+}
+
+.change-btn{
+  position: relative;
+  background:linear-gradient(
+    219deg,
+    #3764d7 13.68%,
+    #2a4ca4 50%,
+    #1d3571 82.86%
+  );
+  border-radius: 20px;
   color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 20px 10px 18px 19px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+
+}
+.change-btn::before{
+  content: '';
+  position:absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  align-items: center;
+  background:linear-gradient(
+  0deg,
+  transparent,
+  transparent 30%,
+  rgba(147, 221, 221, 0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.change-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px (0, 255,255, 0.5);
+}
+.change-btn:hover::before{
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
 }

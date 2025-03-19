@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./styles/HourlyWind.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
+import { useTranslation } from 'react-i18next';
 
 const HourlyWind = ({ weatherData }) => {
   // eslint-disable-next-line no-unused-vars
   const [isDarkMode, setIsDarkMode] = useState(false);
+   const { t } = useTranslation();
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
@@ -36,7 +38,7 @@ const HourlyWind = ({ weatherData }) => {
   return (
     <div className="windContainer">
       <div className="hourlyWind">
-        <h2>Hourly Wind Speed</h2>
+        <h2>{t("hourly_windspeed")}</h2>
         <div className="content">
           {weatherData.hourlyWindSpeed
             .slice(validStartIndex, validStartIndex + 6)

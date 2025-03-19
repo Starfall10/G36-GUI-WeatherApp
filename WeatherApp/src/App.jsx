@@ -2,8 +2,17 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Mid from "./components/Mid";
 import Widget from "./components/Widget";
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n/i18n';
+import "./i18n/du.json";
+import "./i18n/en.json";
+import "./i18n/es.json";
+import "./i18n/fr.json";
+import "./i18n/i18n.js"
+
 
 const App = () => {
+  
   const [city, setCity] = useState("Florida"); // Default city
   const [weatherData, setWeatherData] = useState(null);
 
@@ -58,11 +67,14 @@ const fetchWeather = async (city) => {
   }, []);
 
   return (
+    <I18nextProvider i18n={i18n}>
     <div className="app">
       <Header onSearch={fetchWeather} /> {/* Pass fetchWeather to Header */}
       <Mid city={city} weatherData={weatherData} /> {/* Pass data to Mid */}
       <Widget city={city} weatherData={weatherData} /> {/* Pass data to Widget */}
     </div>
+    </I18nextProvider>
+    
   );
 };
 
