@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d56fa8e5-7a18-4292-b7bc-603736892642" name="Changes" comment="Update .gitignore to ignore .env and .idea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherApp/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherApp/src/components/HourlyTemp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/components/HourlyTemp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeatherApp/src/components/HourlyWind.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/components/HourlyWind.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,7 @@
       <recent name="$PROJECT_DIR$/WeatherApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WeatherApp/src/assets" />
       <recent name="$PROJECT_DIR$/WeatherApp" />
       <recent name="$PROJECT_DIR$/" />
     </key>
