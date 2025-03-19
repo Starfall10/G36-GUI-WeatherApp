@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d56fa8e5-7a18-4292-b7bc-603736892642" name="Changes" comment="Update .gitignore to ignore .env and .idea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherApp/src/components/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/components/Main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherApp/src/components/Widget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherApp/src/components/Widget.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
