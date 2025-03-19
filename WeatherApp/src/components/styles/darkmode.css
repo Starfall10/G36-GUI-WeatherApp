@@ -105,4 +105,11 @@
     .darkModeToggle{
         transform: scale(1,1);
     }
+
+    .dark-mode .change-btn{
+        background: linear-gradient( #010614,0%, #1A2747 52%, #06112e 100%);
+    } 
+.dark-mode .modal_content h2{
+    color: #000000;
+}
     

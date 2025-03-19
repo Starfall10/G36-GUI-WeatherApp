@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styles/HourlyTemp.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
+import { useTranslation } from 'react-i18next';
 
 const HourlyTemp = ({ weatherData }) => {
   if (
@@ -32,6 +33,7 @@ const HourlyTemp = ({ weatherData }) => {
 
   // eslint-disable-next-line no-unused-vars, react-hooks/rules-of-hooks
   const [isDarkMode, setIsDarkMode] = useState(false);
+   const { t } = useTranslation();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -41,7 +43,7 @@ const HourlyTemp = ({ weatherData }) => {
   return (
     <div className="tempContainer">
       <div className="hourlyTemp">
-        <h2>Hourly Forecast</h2>
+        <h2>{t("hourly_forecast")}</h2>
         <div className="content">
           {weatherData.hourlyTemperature
             .slice(validStartIndex, validStartIndex + 6)

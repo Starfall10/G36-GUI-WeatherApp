@@ -4,9 +4,11 @@ import HourlyTemp from "./HourlyTemp";
 import HourlyWind from "./HourlyWind";
 import "./styles/Mid.css";
 import "./styles/darkmode.css";
+import { useTranslation } from 'react-i18next';
 
 const Mid = ({ city, weatherData }) => {
   const [isDarkMode] = useState(false);
+   const { t } = useTranslation();
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";

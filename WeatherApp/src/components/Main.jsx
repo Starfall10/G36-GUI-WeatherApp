@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./styles/Main.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
+import { useTranslation } from 'react-i18next';
 
 const Main = ({ city, weatherData }) => {
   const [isDarkMode] = useState(false);
+   const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
@@ -48,14 +50,14 @@ const Main = ({ city, weatherData }) => {
     <div className="main_container">
       <div className="main">
         <div className="date_time">
-          <p>{localTime || "Fetching time..."}</p>
+          <p>{localTime || t ("fetching_time")}</p>
         </div>
         {weatherData ? (
           <>
             <div className="weather">
               <WeatherIcon condition="cloudy" size={225} />
               <div>
-                <h1>{weatherData.temperature}°C</h1>
+                <h1>{t ("temperature", {value: weatherData.temperature})}</h1>
                 <p>{city}</p>
               </div>
             </div>
