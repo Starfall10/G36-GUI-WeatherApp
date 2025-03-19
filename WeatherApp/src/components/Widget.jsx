@@ -26,14 +26,20 @@ const Widget = ({ city, weatherData }) => {
           {weatherData ? (
             <>
               <div className="extraCard">
-                <WeatherIcon condition="humidity" size="clamp(3rem, 40%, 8rem)" />
+                <WeatherIcon
+                  condition="humidity"
+                  size="clamp(3rem, 40%, 8rem)"
+                />
                 <div>
                   <h1>Humidity</h1>
                   <p>{weatherData.humidity}%</p>
                 </div>
               </div>
               <div className="extraCard">
-                <WeatherIcon condition="heavyRain" size="clamp(3rem, 40%, 8rem)" />
+                <WeatherIcon
+                  condition="heavyRain"
+                  size="clamp(3rem, 40%, 8rem)"
+                />
                 <div>
                   <h1>Precipitation</h1>
                   <p>{weatherData.precipitation} mm</p>
@@ -54,7 +60,7 @@ const Widget = ({ city, weatherData }) => {
       </div>
 
       {/* Ensure Main component gets the weatherData including precipitation */}
-      <Main city={city} weatherData={weatherData} />
+      {/* <Main city={city} weatherData={weatherData} /> */}
     </div>
   );
 };
