@@ -102,3 +102,7 @@
           );
           height: 100vh;
     }
+    .darkModeToggle{
+        transform: scale(1,1);
+    }
+    
