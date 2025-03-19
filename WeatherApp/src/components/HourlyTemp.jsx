@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styles/HourlyTemp.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const HourlyTemp = ({ weatherData }) => {
   if (
@@ -33,7 +33,8 @@ const HourlyTemp = ({ weatherData }) => {
 
   // eslint-disable-next-line no-unused-vars, react-hooks/rules-of-hooks
   const [isDarkMode, setIsDarkMode] = useState(false);
-   const { t } = useTranslation();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {

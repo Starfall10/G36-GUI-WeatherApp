@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./styles/Widget.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import WeatherMap from "./WeatherMap";
 
 // eslint-disable-next-line no-unused-vars
 const Widget = ({ city, weatherData }) => {
@@ -18,10 +19,7 @@ const Widget = ({ city, weatherData }) => {
       <div className="widget">
         <div className="graphs">
           <div>
-            <WeatherIcon condition="graph" size={140} />
-            <WeatherIcon condition="graph" size={140} />
-            <WeatherIcon condition="graph" size={140} />
-            <WeatherIcon condition="graph" size={140} />
+            <WeatherMap city={city} />
           </div>
         </div>
         <div className="extra">
@@ -33,7 +31,7 @@ const Widget = ({ city, weatherData }) => {
                   size="clamp(3rem, 40%, 8rem)"
                 />
                 <div>
-                <h1>{t("humidity")}</h1>
+                  <h1>{t("humidity")}</h1>
                   <p>{weatherData.humidity}%</p>
                 </div>
               </div>
@@ -43,15 +41,14 @@ const Widget = ({ city, weatherData }) => {
                   size="clamp(3rem, 40%, 8rem)"
                 />
                 <div>
-                <h1>{t("precipitation")}</h1>
+                  <h1>{t("precipitation")}</h1>
                   <p>{weatherData.precipitation} mm</p>
                 </div>
               </div>
               <div className="extraCard">
                 <WeatherIcon condition="wind" size="clamp(3rem, 40%, 8rem)" />
                 <div>
-                  
-                <h1>{t("wind_speed")}</h1>
+                  <h1>{t("wind_speed")}</h1>
                   <p>{weatherData.windSpeed} m/s</p>
                 </div>
               </div>
