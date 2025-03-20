@@ -3,6 +3,7 @@ import "./styles/Widget.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
 import { useTranslation } from "react-i18next";
+import WeatherMap from "./WeatherMap";
 
 // eslint-disable-next-line no-unused-vars
 const Widget = ({ city, weatherData }) => {
@@ -19,10 +20,7 @@ const Widget = ({ city, weatherData }) => {
       <div className="widget">
         <div className="graphs">
           <div>
-            <WeatherIcon condition="graph" size={140} />
-            <WeatherIcon condition="graph" size={140} />
-            <WeatherIcon condition="graph" size={140} />
-            <WeatherIcon condition="graph" size={140} />
+            <WeatherMap city={city} />
           </div>
         </div>
         <div className="extra">

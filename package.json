@@ -19,6 +19,9 @@
   "homepage": "https://github.com/Starfall10/G36-GUI-WeatherApp#readme",
   "dependencies": {
     "i18next": "^24.2.3",
-    "react-i18next": "^15.4.1"
+    "leaflet": "^1.9.4",
+    "leaflet.fullscreen": "^4.0.0",
+    "react-i18next": "^15.4.1",
+    "react-leaflet": "^5.0.0"
   }
 }

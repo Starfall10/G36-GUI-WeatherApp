@@ -37,6 +37,7 @@ const HourlyTemp = ({ weatherData }) => {
 
   // eslint-disable-next-line no-unused-vars, react-hooks/rules-of-hooks
   const [isDarkMode, setIsDarkMode] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = useTranslation();
 
   useEffect(() => {
