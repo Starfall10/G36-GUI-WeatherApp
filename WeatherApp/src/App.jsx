@@ -58,14 +58,16 @@ const App = () => {
     } catch (error) {
       console.error("Error fetching weather data:", error);
       alert("Failed to fetch weather data. Please try again.");
-      setWeatherData(null);
+
+      // Reset city to default (London) if there's an error
+      setCity("London");
     }
   };
 
-  // Fetch weather data when the app loads
+  // Fetch weather data when the app loads or when the city changes
   useEffect(() => {
     fetchWeather(city);
-  }, []);
+  }, [city]);
 
   return (
     <I18nextProvider i18n={i18n}>
