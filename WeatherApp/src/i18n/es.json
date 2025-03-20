@@ -1,0 +1,15 @@
+{
+    "Enter Location, Postcode" : "Ingrese ubicación, código postal",
+    "change_language": "Cambiar idoma",
+    "fetching_time": "Fetching time...",
+    "loading_weather": "Loading weather data...",
+    "temperature" : "{{value}}°C",
+    "loading_location": "Fetching location...",
+    "hourly_forecast": "Pronóstico por hora",
+    "now" : "Ahora",
+    "hourly_windspeed": "Velocidad del viento por hora",
+    "humidity": "Humedad",
+    "precipitation" : "Precipipatión",
+    "wind_speed": "Nivel de peligro"
+
+}

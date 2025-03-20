@@ -1,0 +1,15 @@
+{
+    "Enter Location, Postcode" : "Entrez un lieu, un code postal",
+    "change_language": "Changer de langue",
+    "fetching_time": "Fetching time...",
+    "loading_weather": "Loading weather data...",
+    "temperature" : "{{value}}°C",
+    "loading_location": "Fetching location...",
+    "hourly_forecast": "Prévisions horaires",
+    "now" : "Maintenant",
+    "hourly_windspeed": "Vitesse du vent horaire",
+    "humidity": "Humidité",
+    "precipitation" : "Précipipation",
+    "wind_speed": "Velocidad del viento"
+
+}

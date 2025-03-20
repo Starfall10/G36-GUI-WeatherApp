@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Main.css";
 import "./styles/darkmode.css";
+import { useTranslation } from "react-i18next";
 import snowIcon from "/src/assets/snow.png";
 import cloudyIcon from "/src/assets/cloudy.png";
 import sunnyIcon from "/src/assets/sun.png";
@@ -8,6 +9,7 @@ import rainIcon from "/src/assets/heavy-rain.png";
 
 const Main = ({ city, weatherData }) => {
   const [isDarkMode] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
@@ -32,7 +34,9 @@ const Main = ({ city, weatherData }) => {
           hour12: true,
         };
 
-        let formattedTime = new Intl.DateTimeFormat("en-US", options).format(localTimeDate);
+        let formattedTime = new Intl.DateTimeFormat("en-US", options).format(
+          localTimeDate
+        );
         formattedTime = formattedTime.replace(" at", " ");
 
         setLocalTime(formattedTime);
@@ -57,18 +61,21 @@ const Main = ({ city, weatherData }) => {
     <div className="main_container">
       <div className="main">
         <div className="date_time">
-          <p>{localTime || "Fetching time..."}</p>
+          <p>{localTime || t("fetching_time")}</p>
         </div>
         {weatherData ? (
           <>
             <div className="weather">
               <img
-                src={getWeatherIcon(weatherData.temperature, weatherData.precipitation)}
+                src={getWeatherIcon(
+                  weatherData.temperature,
+                  weatherData.precipitation
+                )}
                 alt="Weather Icon"
                 width={225}
               />
               <div>
-                <h1>{weatherData.temperature}°C</h1>
+                <h1>{t("temperature", { value: weatherData.temperature })}</h1>
                 <p>{city}</p>
               </div>
             </div>
