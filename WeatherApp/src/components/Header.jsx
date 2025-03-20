@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./styles/Header.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import LanguageModal from "./LanguageModal";
 
 const Header = ({ onSearch }) => {
@@ -18,7 +18,7 @@ const Header = ({ onSearch }) => {
   };
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isModalOpen, setModalOpen] = useState (false); 
+  const [isModalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
@@ -26,7 +26,6 @@ const Header = ({ onSearch }) => {
 
   return (
     <div className="header">
-
       <div
         className="darkModeToggle"
         onClick={() => setIsDarkMode(!isDarkMode)}
@@ -49,13 +48,15 @@ const Header = ({ onSearch }) => {
         />
       </div>
 
-        <div className= "change">
-          {/* button for language change at the header */}
-          <button className ="change-btn" onClick={() => setModalOpen(true)}>🌍 {t("change_language")}</button> 
-        <LanguageModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}/> 
-
-
-
+      <div className="change">
+        {/* button for language change at the header */}
+        <button className="change-btn" onClick={() => setModalOpen(true)}>
+          🌍 {t("change_language")}
+        </button>
+        <LanguageModal
+          isOpen={isModalOpen}
+          onClose={() => setModalOpen(false)}
+        />
       </div>
     </div>
   );
