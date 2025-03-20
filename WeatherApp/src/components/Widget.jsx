@@ -14,6 +14,7 @@ const Widget = ({ city, weatherData }) => {
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);
+
   return (
     <div className="widget_container">
       <div className="widget">
@@ -58,6 +59,9 @@ const Widget = ({ city, weatherData }) => {
           )}
         </div>
       </div>
+
+      {/* Ensure Main component gets the weatherData including precipitation */}
+      {/* <Main city={city} weatherData={weatherData} /> */}
     </div>
   );
 };

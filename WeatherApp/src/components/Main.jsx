@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Main.css";
-import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import snowIcon from "/src/assets/snow.png";
+import cloudyIcon from "/src/assets/cloudy.png";
+import sunnyIcon from "/src/assets/sun.png";
+import rainIcon from "/src/assets/heavy-rain.png";
 
 const Main = ({ city, weatherData }) => {
   const [isDarkMode] = useState(false);
-   const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
@@ -34,7 +37,7 @@ const Main = ({ city, weatherData }) => {
         let formattedTime = new Intl.DateTimeFormat("en-US", options).format(
           localTimeDate
         );
-        formattedTime = formattedTime.replace(" at", " "); // Format cleanup
+        formattedTime = formattedTime.replace(" at", " ");
 
         setLocalTime(formattedTime);
       };
@@ -46,18 +49,33 @@ const Main = ({ city, weatherData }) => {
     }
   }, [weatherData]);
 
+  // Function to determine weather icon based on temperature and condition
+  const getWeatherIcon = (temperature, precipitation) => {
+    if (precipitation > 0) return rainIcon; // Show rain icon if precipitation is above 0
+    if (temperature <= 0) return snowIcon;
+    if (temperature > 0 && temperature < 25) return cloudyIcon;
+    return sunnyIcon;
+  };
+
   return (
     <div className="main_container">
       <div className="main">
         <div className="date_time">
-          <p>{localTime || t ("fetching_time")}</p>
+          <p>{localTime || t("fetching_time")}</p>
         </div>
         {weatherData ? (
           <>
             <div className="weather">
-              <WeatherIcon condition="cloudy" size={225} />
+              <img
+                src={getWeatherIcon(
+                  weatherData.temperature,
+                  weatherData.precipitation
+                )}
+                alt="Weather Icon"
+                width={225}
+              />
               <div>
-                <h1>{t ("temperature", {value: weatherData.temperature})}</h1>
+                <h1>{t("temperature", { value: weatherData.temperature })}</h1>
                 <p>{city}</p>
               </div>
             </div>

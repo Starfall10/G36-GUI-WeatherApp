@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./styles/HourlyWind.css";
 import WeatherIcon from "./WeatherIcon";
 import "./styles/darkmode.css";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import windIcon from "/src/assets/moving_wind.gif";
 
 const HourlyWind = ({ weatherData }) => {
-  // eslint-disable-next-line no-unused-vars
   const [isDarkMode, setIsDarkMode] = useState(false);
-   const { t } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
@@ -44,7 +44,15 @@ const HourlyWind = ({ weatherData }) => {
             .slice(validStartIndex, validStartIndex + 6)
             .map((speed, index) => (
               <div className="card" key={index}>
-                <WeatherIcon condition="wind" size="clamp(3rem, 50%, 8rem)" />
+                <img
+                  src={windIcon}
+                  alt="Wind Icon"
+                  className="windIcon"
+                  style={{
+                    width: "75px",
+                    height: "75px",
+                  }}
+                />
                 <div className="speed">{Math.round(speed)} km/h</div>
                 <div className="time">
                   {new Date(
