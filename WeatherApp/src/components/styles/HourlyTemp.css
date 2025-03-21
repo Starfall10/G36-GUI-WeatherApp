@@ -16,9 +16,9 @@
 
 .hourlyTemp h2 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  padding-top: 1.5rem;
+  padding-top: 0.65rem;
   padding-left: 2rem;
   padding-bottom: 0.5rem;
 }
@@ -47,7 +47,7 @@
 .temp {
   padding-top: 1rem;
   color: white;
-  font-size: clamp(1rem, 2vw, 1.7rem);
+  font-size: clamp(0.6rem, 1.5vw, 1.3rem);
   font-weight: 500;
 }
 

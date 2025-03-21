@@ -16,9 +16,9 @@
 
 .hourlyWind h2 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  padding-top: 1.5rem;
+  padding-top: 0.65rem;
   padding-left: 2rem;
   padding-bottom: 0.5rem;
 }
@@ -29,12 +29,14 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  height: 70%;
+  height: 100%;
 }
 
 .card {
   border-radius: 1.25rem;
   width: 15%;
+  height: 100%
+  ;
   background: linear-gradient(180deg, #4f7ff9 0%, #46609f 100%);
   display: flex;
   flex-direction: column;
@@ -43,8 +45,9 @@
 }
 
 .speed {
+  padding-top: 0.8rem;
   color: white;
-  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-size: clamp(0.6rem, 1.5vw, 1.3rem);
   font-weight: 500;
 }
 
