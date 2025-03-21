@@ -11,7 +11,7 @@ const Main = () => {
           <p>1:34 PM</p>
         </div>
         <div className="weather">
-          <WeatherIcon condition="cloudy" size="clamp(4rem, 50%, 15rem)" />
+          <WeatherIcon condition="cloudy" size="clamp(5rem, 70%, 1rem)" /* width size height */ />
           <div>
             <h1>16°C</h1>
             <p>Tower Hamlets</p>

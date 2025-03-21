@@ -3,14 +3,16 @@ import Header from "./components/Header";
 import Mid from "./components/Mid";
 import Widget from "./components/Widget";
 
-const App = () => {
+function App() {
   return (
-    <div className="app">
-      <Header />
-      <Mid />
-      <Widget />
+    <div className="mobile-container">
+      <div className="app">
+        <Header />
+        <Mid />
+        <Widget />
+      </div>
     </div>
   );
-};
+}
 
 export default App;
