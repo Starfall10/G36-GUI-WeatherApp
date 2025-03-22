@@ -1,5 +1,5 @@
 {
-    "Enter Location, Postcode" : "Enter Location, Postcode",
+    "Enter Location" : "Enter Location", 
     "change_language": "Change Language",
     "fetching_time": "Fetching time...",
     "loading_weather": "Loading weather data...",
@@ -10,6 +10,18 @@
     "hourly_windspeed": "Hourly Windspeed",
     "humidity": "Humidity",
     "precipitation" : "Precipitation",
-    "wind_speed": "Wind Speed"
+    "wind_speed": "Wind Speed",
+    "Loading_hourly_wind_data": "Loading hourly wind data...",
+    "Loading_weather_details":"Loading weather details...",
+    "map.mtemperature": "Temperature",
+    "map.verycold": "Very Cold",
+    "map.cold": "Cold",
+    "map.mild":"Mild",
+    "map.warm":"Warm",
+    "map.hot":"Hot",
+    "map.veryHot":"Very Hot",
+    "alerts.fetchError": "Failed to fetch weather data. Please try again.",
+    "aleart.Error": "Error fetching weather data"
+
 
 }

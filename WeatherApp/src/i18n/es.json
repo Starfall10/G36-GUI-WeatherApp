@@ -1,15 +1,27 @@
 {
-    "Enter Location, Postcode" : "Ingrese ubicación, código postal",
+    "Enter Location" : "Ingrese ubicación",
     "change_language": "Cambiar idoma",
-    "fetching_time": "Fetching time...",
-    "loading_weather": "Loading weather data...",
+    "fetching_time": "Obteniendo la hora...",
+    "loading_weather": "Cargando datos meteorológicos...",
     "temperature" : "{{value}}°C",
-    "loading_location": "Fetching location...",
+    "loading_location": "Obteniendo la ubicación...",
     "hourly_forecast": "Pronóstico por hora",
     "now" : "Ahora",
     "hourly_windspeed": "Velocidad del viento por hora",
     "humidity": "Humedad",
     "precipitation" : "Precipipatión",
-    "wind_speed": "Nivel de peligro"
+    "wind_speed": "Nivel de peligro",
+    "Loading_hourly_wind_data": "Cargando datos horairios del viento...",
+    "map.mtemperature": "Temperatura",
+    "map.veryCold": "Muy frío",
+    "map.cold": "Frío",
+    "map.mild":"Témplado",
+    "map.warm":"Cálido",
+    "map.hot":"Caliente",
+    "map.veryHot":"Muy caliente",
+    "alerts.fetchError": "Error al obteber los datos meteorológicos. Inténtalo de nuevo.",
+    "alertsError": "Error al obtener los datos meteorológicos"
+
+
 
 }

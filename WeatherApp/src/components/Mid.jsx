@@ -7,9 +7,10 @@ import "./styles/darkmode.css";
 import { useTranslation } from 'react-i18next';
 
 const Mid = ({ city, weatherData }) => {
-  const [isDarkMode] = useState(false);
-   const { t } = useTranslation();
+  const [isDarkMode] = useState(false); // state to manage the dark mode
+  const { t } = useTranslation(); // initialise the translation to manage the text change using the function 't'
 
+  // useEffect used to apply the dark/light mode to the body when clicked on the toggle
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);

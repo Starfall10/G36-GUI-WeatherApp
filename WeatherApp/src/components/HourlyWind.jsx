@@ -6,15 +6,16 @@ import { useTranslation } from "react-i18next";
 import windIcon from "/src/assets/moving_wind.gif";
 
 const HourlyWind = ({ weatherData }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const { t } = useTranslation();
+  const [isDarkMode] = useState(false); // state to manage the dark mode
+  const { t } = useTranslation(); // state to manage the text change using the function 't'
 
+  // useEffect used to apply the dark/light mode to the body when clicked on the toggle
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);
 
   if (!weatherData || !weatherData.hourlyWindSpeed || !weatherData.hourlyTime) {
-    return <p>Loading hourly wind data...</p>;
+    return <p>{t("Loading_hourly_wind_data")}</p>;
   }
 
   // Get current UTC time and adjust to city's local time + 1 hour

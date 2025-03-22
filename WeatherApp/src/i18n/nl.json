@@ -1,0 +1,26 @@
+{
+    "Enter Location" : "Voer locatie in",
+    "change_language": "Taal wijzigen",
+    "fetching_time": "Tijd ophalen...",
+    "loading_weather": "Weergegevens laden...",
+    "temperature" : "{{value}}°C",
+    "loading_location": "Locatie ophalen...",
+    "hourly_forecast": "Uurlijkse voorspelling",
+    "now" : "Nu",
+    "hourly_windspeed": "Uurlijkse windsnelhied",
+    "humidity": "Luchtvochtigheid",
+    "precipitation" : "Neerslag",
+    "wind_speed": "Windsnelheid",
+    "Loading_hourly_wind_data": "Bezig met laden van uurlijkse windgegevens...",
+    "Loading_weather_details": "Weergegevens laden...",
+    "map.mtemperature": "Temperatuur",
+    "map.veryCold": "Erg Koud",
+    "map.cold": "Koud",
+    "map.mild":"Mild",
+    "map.warm":"Warm",
+    "map.hot":"Heet",
+    "map.veryHot":"Erg Heet",
+    "alerts.fetchError": "Het ophalen van de weergegevens is mislukt. Probeer het opnieuw.",
+    "alerts.Error": "Fout bij het ophalen van de weergegevens"
+
+}

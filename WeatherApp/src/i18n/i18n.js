@@ -3,13 +3,14 @@ import { initReactI18next } from 'react-i18next';
 import en from './en.json';
 import fr from './fr.json';
 import es from './es.json';
-import du from './du.json';
+import nl from './nl.json';
+
 
 const resources = {
     en: {translation: en},
     fr: {translation: fr},
     es: {translation: es},
-    du: {translation: du}
+    nl: {translation: nl}
 };
 
 i18n
