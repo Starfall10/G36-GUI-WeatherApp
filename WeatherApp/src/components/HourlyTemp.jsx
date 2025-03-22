@@ -40,6 +40,7 @@ const HourlyTemp = ({ weatherData }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = useTranslation();
 
+  //effects to apply the dark/light mode to the body when clicked on the toggle
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);

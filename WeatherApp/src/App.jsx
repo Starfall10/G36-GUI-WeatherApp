@@ -2,15 +2,16 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Mid from "./components/Mid";
 import Widget from "./components/Widget";
-import { I18nextProvider } from "react-i18next";
+import { I18nextProvider, useTranslation } from "react-i18next";
 import i18n from "./i18n/i18n";
-import "./i18n/du.json";
+import "./i18n/nl.json";
 import "./i18n/en.json";
 import "./i18n/es.json";
 import "./i18n/fr.json";
 import "./i18n/i18n.js";
 
 const App = () => {
+  const {t} = useTranslation(); // Initialise translation funtion
   const [city, setCity] = useState("London");
   const [weatherData, setWeatherData] = useState(null);
 
@@ -56,8 +57,8 @@ const App = () => {
 
       setCity(openWeatherData.name);
     } catch (error) {
-      console.error("Error fetching weather data:", error);
-      alert("Failed to fetch weather data. Please try again.");
+      console.error(t("alerts.Error"), error);
+      alert(t("alerts.fetchError"));
 
       // Reset city to default (London) if there's an error
       setCity("London");

@@ -8,7 +8,7 @@ import WeatherMap from "./WeatherMap";
 // eslint-disable-next-line no-unused-vars
 const Widget = ({ city, weatherData }) => {
   // eslint-disable-next-line no-unused-vars
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode] = useState(false); // state to manage the dark mode
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const Widget = ({ city, weatherData }) => {
               </div>
             </>
           ) : (
-            <p>Loading weather details...</p>
+            <p>{t('Loading_weather_details')}</p>
           )}
         </div>
       </div>

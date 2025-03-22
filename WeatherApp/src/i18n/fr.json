@@ -1,15 +1,27 @@
 {
     "Enter Location" : "Entrez un lieu",
     "change_language": "Changer de langue",
-    "fetching_time": "Fetching time...",
-    "loading_weather": "Loading weather data...",
+    "fetching_time": "Récuperation de I'heure ...",
+    "loading_weather": "Chargement des données méteorologiques...",
     "temperature" : "{{value}}°C",
-    "loading_location": "Fetching location...",
+    "loading_location": "Récuperation de la localisation...",
     "hourly_forecast": "Prévisions horaires",
     "now" : "Maintenant",
     "hourly_windspeed": "Vitesse du vent horaire",
     "humidity": "Humidité",
     "precipitation" : "Précipipation",
-    "wind_speed": "Velocidad del viento"
+    "wind_speed": "Velocidad del viento",
+    "Loading_hourly_wind_data": "Chargement des données horaires du vent...",
+    "Loading_weather_details": "Chargement des details météorologiques",
+    "map.mtemperature": "Température",
+    "map.veryCold": "Très friod",
+    "map.cold": "Friod",
+    "map.mild":"Doux",
+    "map.warm":"Chaud",
+    "map.hot":"Très chaud",
+    "map.veryHot":"Extrêmement chaud", 
+    "alerts.fetchError": "Failed to fetch weather data. Please try again."
+
+
 
 }

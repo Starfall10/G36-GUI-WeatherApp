@@ -5,6 +5,7 @@ import "leaflet.fullscreen";
 import "leaflet.fullscreen/Control.FullScreen.css";
 import L from "leaflet";
 import "./styles/WeatherMap.css";
+import { useTranslation } from "react-i18next";
 
 const API_KEY = import.meta.env.VITE_APP_KEY;
 
@@ -16,6 +17,7 @@ const ChangeMapView = ({ coords }) => {
 
 const WeatherLegend = () => {
   const map = useMap();
+  const {t} = useTranslation(); // initialise the translation to manage the text change using the function 't'
 
   useEffect(() => {
     const legend = L.control({ position: "bottomleft" });
@@ -23,13 +25,13 @@ const WeatherLegend = () => {
     legend.onAdd = function () {
       const div = L.DomUtil.create("div", "info legend");
       div.innerHTML = `
-        <h4>Temperature (°C)</h4>
-        <div class="legend-item"><span style="background-color: #0000FF"></span> Very Cold</div>
-        <div class="legend-item"><span style="background-color: #00FFFF"></span> Cold</div>
-        <div class="legend-item"><span style="background-color: #00FF00"></span> Mild</div>
-        <div class="legend-item"><span style="background-color: #FFFF00"></span> Warm</div>
-        <div class="legend-item"><span style="background-color: #FF7F00"></span> Hot</div>
-        <div class="legend-item"><span style="background-color: #FF0000"></span> Very Hot</div>
+        <h4>${t("map.mtemperature")}(°C)</h4>
+        <div class="legend-item"><span style="background-color: #0000FF"></span> ${t("map.verycold")}</div>
+        <div class="legend-item"><span style="background-color: #00FFFF"></span> ${t("map.cold")}</div>
+        <div class="legend-item"><span style="background-color: #00FF00"></span> ${t("map.mild")}</div>
+        <div class="legend-item"><span style="background-color: #FFFF00"></span> ${t("map.warm")}</div>
+        <div class="legend-item"><span style="background-color: #FF7F00"></span> ${t("map.hot")}</div>
+        <div class="legend-item"><span style="background-color: #FF0000"></span> ${t("map.veryHot")}</div>
       `;
       return div;
     };
@@ -38,7 +40,7 @@ const WeatherLegend = () => {
     return () => {
       legend.remove();
     };
-  }, [map]);
+  }, [map, t]);
 
   return null;
 };

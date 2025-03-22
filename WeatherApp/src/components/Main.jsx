@@ -6,11 +6,13 @@ import snowIcon from "/src/assets/snow.png";
 import cloudyIcon from "/src/assets/cloudy.png";
 import sunnyIcon from "/src/assets/sun.png";
 import rainIcon from "/src/assets/heavy-rain.png";
+import i18next from "i18next";
 
 const Main = ({ city, weatherData }) => {
-  const [isDarkMode] = useState(false);
-  const { t, i18n } = useTranslation();
+  const [isDarkMode] = useState(false); // state to manage the dark mode
+  const { t, i18n } = useTranslation();  // initialise the translation to manage the text change using the function 't'
 
+  // useEffect used to apply the dark/light mode to the body when clicked on the toggle
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);
@@ -34,11 +36,13 @@ const Main = ({ city, weatherData }) => {
           hour12: true,
         };
 
-        let formattedTime = new Intl.DateTimeFormat("en-US", options).format(
+        let formattedTime = new Intl.DateTimeFormat(i18next.language, options).format(
           localTimeDate
         );
         formattedTime = formattedTime.replace(" at", " ");
 
+
+        formattedTime = formattedTime.charAt(0).toUpperCase() + formattedTime.slice(1);
         setLocalTime(formattedTime);
       };
 
@@ -47,7 +51,7 @@ const Main = ({ city, weatherData }) => {
 
       return () => clearInterval(interval);
     }
-  }, [weatherData]);
+  }, [weatherData, i18next.language]);
 
   // Function to determine weather icon based on temperature and condition
   const getWeatherIcon = (temperature, precipitation) => {
@@ -75,7 +79,7 @@ const Main = ({ city, weatherData }) => {
                 width={225}
               />
               <div>
-                <h1>{t("temperature", { value: weatherData.temperature })}</h1>
+                <h1>{t("temperature", { value: weatherData.temperature })}</h1> 
                 <p>{city}</p>
               </div>
             </div>
@@ -85,7 +89,7 @@ const Main = ({ city, weatherData }) => {
             </div>
           </>
         ) : (
-          <p>Loading weather data...</p>
+          <p>{t('loading_weather...')}</p>
         )}
       </div>
     </div>

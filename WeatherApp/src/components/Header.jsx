@@ -17,9 +17,11 @@ const Header = ({ onSearch }) => {
     }
   };
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isModalOpen, setModalOpen] = useState(false);
 
+  const [isDarkMode, setIsDarkMode] = useState(false);   //state to manage dark mode toogle
+  const [isModalOpen, setModalOpen] = useState(false); // state to manage langauge modal 
+
+  //effects to apply the dark/light mode to the body when clicked on the toggle
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);
@@ -28,10 +30,11 @@ const Header = ({ onSearch }) => {
     <div className="header">
       <div
         className="darkModeToggle"
-        onClick={() => setIsDarkMode(!isDarkMode)}
+        onClick={() => setIsDarkMode(!isDarkMode)} // When there is a click toggle darkmode appear
       >
+       
         <WeatherIcon
-          condition={isDarkMode ? "sun" : "moonb"}
+          condition={isDarkMode ? "sun" : "moonb"} // show sun in darkmode, moon in light mode
           size="clamp(1rem, 50%, 2rem)"
         />
       </div>
@@ -43,16 +46,16 @@ const Header = ({ onSearch }) => {
           ref={inputRef}
           type="text"
           className="searchField"
-          placeholder={t("Enter Location, Postcode")}
+          placeholder={t("Enter Location")}
           onKeyPress={handleKeyPress}
         />
       </div>
 
       <div className="change">
-        {/* button for language change at the header */}
+        {/* button for language change at the header and translate text for change language */}
         <button className="change-btn" onClick={() => setModalOpen(true)}>
-          🌍 {t("change_language")}
-        </button>
+          🌍 {t("change_language")} 
+        </button>  
         <LanguageModal
           isOpen={isModalOpen}
           onClose={() => setModalOpen(false)}
