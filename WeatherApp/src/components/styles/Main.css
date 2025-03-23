@@ -60,3 +60,71 @@
 .high_low p {
   margin-right: 3rem;
 }
+
+@media screen and (max-width: 700px) {
+  .main_container {
+    padding: 1rem;
+    height: auto; /* Allow it to grow naturally */
+  }
+
+  .main {
+    height: auto;
+    width: 100%;
+    color: white;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      219deg,
+      #3764d7 13.68%,
+      #2a4ca4 50%,
+      #1d3571 82.86%
+    );
+    padding: 1rem 1.2rem;
+  }
+
+  .date_time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+
+  .weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .weather div {
+    margin-left: 0;
+  }
+
+  .weather h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 400;
+  }
+
+  .weather p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 300;
+  }
+
+  .high_low {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    font-weight: 300;
+  }
+
+  .high_low p {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}

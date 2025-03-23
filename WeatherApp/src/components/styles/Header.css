@@ -145,3 +145,46 @@
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
+
+@media screen and (max-width: 700px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .darkModeToggle {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+  }
+
+  .searchBar {
+    flex: 1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .searchBar input {
+    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    padding-left: 0.5rem;
+  }
+
+  .change {
+    position: relative;
+    right: auto;
+    flex-shrink: 0;
+  }
+
+  .change-btn {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    white-space: nowrap;
+  }
+}
