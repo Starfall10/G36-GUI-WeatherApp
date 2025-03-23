@@ -69,7 +69,7 @@
 
   .main {
     height: auto;
-    min-height: 225px;
+    min-height: 215px;
     width: 100%;
     color: white;
     border-radius: 1.25rem;
@@ -105,8 +105,8 @@
   }
 
   .weather img {
-    width: 72px;
-    height: 72px;
+    width: 100px;
+    height: 100px;
   }
 
   .weatherText {
