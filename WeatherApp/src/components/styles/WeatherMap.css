@@ -54,3 +54,9 @@
 .overlay-toggle button:hover {
   background: #0056b3;
 }
+
+@media (max-width: 700px) {
+  .info.legend {
+    display: none; /* Hide legend on small screens */
+  }
+}
