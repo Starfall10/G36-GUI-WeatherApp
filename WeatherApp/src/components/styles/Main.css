@@ -60,3 +60,84 @@
 .high_low p {
   margin-right: 3rem;
 }
+
+@media screen and (max-width: 700px) {
+  .main_container {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .main {
+    height: auto;
+    min-height: 215px;
+    width: 100%;
+    color: white;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      219deg,
+      #3764d7 13.68%,
+      #2a4ca4 50%,
+      #1d3571 82.86%
+    );
+    padding: 1rem 1.5rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .date_time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-weight: 400;
+    padding-left: 1rem;
+  }
+
+  .weather {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-left: 0.25rem;
+    padding-left: 1rem;
+  }
+
+  .weather img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .weatherText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .weatherText h1 {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .weatherText p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+  }
+
+  .high_low {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 300;
+    padding-left: 1rem;
+  }
+
+  .high_low p {
+    margin: 0;
+  }
+}

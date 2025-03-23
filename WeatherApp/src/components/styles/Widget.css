@@ -78,3 +78,95 @@
 
   font-weight: 500;
 }
+@media screen and (max-width: 700px) {
+  .widget_container {
+    padding: 1rem;
+    height:37%;
+  }
+  
+  .widget {
+    height: 100%;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      219deg,
+      #3764d7 13.68%,
+      #2a4ca4 50%,
+      #1d3571 82.86%
+    );
+  }
+  
+  .graphs {
+    height: 75%;
+    width: 75%;
+    padding: 1rem;
+  }
+  
+  .graph_container {
+    display: flex;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      219deg,
+      #3764d7 13.68%,
+      #2a4ca4 50%,
+      #1d3571 82.86%
+    );
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .extra {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .extraCard {
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      219deg,
+      #3764d7 13.68%,
+      #2a4ca4 50%,
+      #1d3571 82.86%
+    );
+    width: 80%;
+    max-width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .extraCard h1 {
+    color: white;
+    font-weight: 500;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .extraCard img {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 0.5rem;
+  }
+  
+  
+  
+  .extraCard p {
+    color: white;
+    font-size: clamp(0.5rem, 1.4vw, 1.5rem);
+    font-weight: 500;
+  }
+
+  
+}

@@ -1,129 +1,126 @@
-:root{
-    --light-bg:linear-gradient(219deg,#3764d7 13.68%, #2a4ca4 50%,#1d3571 82.86%);
-    --light-text:#FFFFFF;
-    --dark-bg:linear-gradient(219deg,#010614,13.68%, #1A2747 30%, #1D3571 80%);
-    --dark-text: #beb3b3;
+:root {
+  --light-bg: linear-gradient(
+    219deg,
+    #3764d7 13.68%,
+    #2a4ca4 50%,
+    #1d3571 82.86%
+  );
+  --light-text: #ffffff;
+  --dark-bg: linear-gradient(219deg, #010614, 13.68%, #1a2747 30%, #1d3571 80%);
+  --dark-text: #beb3b3;
 }
 
 /* darkmode background changes style  */
-    .dark-mode{
-        background: var(--dark-bg);
-        color: var(--dark-text);
-    }
-
-
-    /* darkmode for toggle and searchbar */
-    .dark-mode .darkModeToggle,
-    .dark-mode .searchBar{
-        background: var(--dark-bg);
-        color: var(--dark-text);
-        border-color: var(--dark-text);
-    }
-
-    /* darkmode searchbar input */
-    .dark-mode .searchBar input{
-        color: var(--dark-text);
-    }
-  /* darkmode for placeholder text */
-    .dark-mode ::placeholder{
-        color: var(--dark-text);
-    }
-
-    .dark-mode .content .card{
-        background: var(--dark-bg);
-        color: var(--dark-text);
-        transition: all 0.3s ease-in-out;
-    }
-
-      /* darkmode for main container */
-    .dark-mode .main{
-        background: var(--dark-bg);
-        color: var(--dark-text);
-        border-color: var(--dark-text);
-        height: 100%;
-        width: 100%;
-        border-radius: 1.25rem;
-        transition: all 0.3s ease-in-out;
-    }
-
-    /* darkmode for middle container */
-    .dark-mode .midContainer{
-        background-color: var(--dark-bg);
-        color: var(--dark-text);
-        transition: all 0.1s ease-in-out;
-    }
-
-    /* darkmode for the map container */
-    .dark-mode .graph_container{
-        background: var(--dark-bg);
-        color: var(--dark-text);
-        transition: all 0.3s ease-in-out;
-    }
-
-    .dark-mode .extraCard{
-        background: var(--dark-bg);
-        color: var(--dark-text);
-    }
-
-    /* darkmode for the widget */
-    .dark-mode .widget{
-        background: var(--dark-bg);
-        color: var(--dark-text);
-    }
-  /* darkmode for temperature */
-    .dark-mode .temp{
-        color: var(--dark-text);
-    }
-
-    /* darkmode for time */
-    .dark-mode .time{
-        color: var(--dark-text);
-    }
-
-    /* darkmode for wind speed */
-    .dark-mode .speed{
-        color: var(--dark-text);
-    }
-
-    /* darkmode for texts*/
-    .dark-mode .extra p,
-    .dark-mode .extra h1{
-        color: var(--dark-bg);
-    }
-
-    .dark-mode .hourlyTemp{
-        background: linear-gradient(#010614,0%, #1A2747 52%, #1D3571 100%);
-
-    }
-    .dark-mode .hourlyWind {
-        background: linear-gradient(#010614,0%, #1A2747 52%, #1D3571 100%);
-    }
- /* darkmode for the wind and temperature headers */
-    .dark-mode .windContainer h2,
-    .dark-mode .tempContainer h2 {
-        color: var(--dark-bg);
-    }
-
-    .dark-mode .app{
-        background:linear-gradient(
-            247deg,
-            #000000 0%,
-            #010614 33.9%,
-            #1D3571 100%
-          );
-          height: 100vh;
-    }
-     /* darkmode for toggle */
-    .darkModeToggle{
-        transform: scale(1,1);
-    }
-
-    /* darkmode for the change button */
-    .dark-mode .change-btn{
-        background: linear-gradient( #010614,0%, #1A2747 52%, #06112e 100%);
-    } 
-
-.dark-mode .modal_content h2{
-    color: #000000;
+.dark-mode {
+  background: var(--dark-bg);
+  color: var(--dark-text);
 }
-    
+
+/* darkmode for toggle and searchbar */
+.dark-mode .darkModeToggle,
+.dark-mode .searchBar {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  border-color: var(--dark-text);
+}
+
+/* darkmode searchbar input */
+.dark-mode .searchBar input {
+  color: var(--dark-text);
+}
+/* darkmode for placeholder text */
+.dark-mode ::placeholder {
+  color: var(--dark-text);
+}
+
+.dark-mode .content .card {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  transition: all 0.3s ease-in-out;
+}
+
+/* darkmode for main container */
+.dark-mode .main {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  border-color: var(--dark-text);
+  height: 100%;
+  width: 100%;
+  border-radius: 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* darkmode for middle container */
+.dark-mode .midContainer {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  transition: all 0.1s ease-in-out;
+}
+
+/* darkmode for the map container */
+.dark-mode .graph_container {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-mode .extraCard {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* darkmode for the widget */
+.dark-mode .widget {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+/* darkmode for temperature */
+.dark-mode .temp {
+  color: var(--dark-text);
+}
+
+/* darkmode for time */
+.dark-mode .time {
+  color: var(--dark-text);
+}
+
+/* darkmode for wind speed */
+.dark-mode .speed {
+  color: var(--dark-text);
+}
+
+/* darkmode for texts*/
+.dark-mode .extra p,
+.dark-mode .extra h1 {
+  color: var(--dark-bg);
+}
+
+.dark-mode .hourlyTemp {
+  background: linear-gradient(#010614, 0%, #1a2747 52%, #1d3571 100%);
+}
+.dark-mode .hourlyWind {
+  background: linear-gradient(#010614, 0%, #1a2747 52%, #1d3571 100%);
+}
+/* darkmode for the wind and temperature headers */
+.dark-mode .windContainer h2,
+.dark-mode .tempContainer h2 {
+  color: var(--dark-bg);
+}
+
+.dark-mode .app {
+  background: linear-gradient(247deg, #000000 0%, #010614 33.9%, #1d3571 100%);
+  /* height: 100vh; */
+}
+/* darkmode for toggle */
+.darkModeToggle {
+  transform: scale(1, 1);
+}
+
+/* darkmode for the change button */
+.dark-mode .change-btn {
+  background: linear-gradient(#010614, 0%, #1a2747 52%, #06112e 100%);
+}
+
+.dark-mode .modal_content h2 {
+  color: #000000;
+}

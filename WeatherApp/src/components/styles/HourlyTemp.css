@@ -56,3 +56,72 @@
   font-size: clamp(0.5rem, 2vw, 1rem);
   font-weight: 500;
 }
+@media screen and (max-width: 700px) {
+  .tempContainer {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .hourlyTemp {
+    height: auto;
+    min-height: 110px;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      219deg,
+      #3764d7 13.68%,
+      #2a4ca4 50%,
+      #1d3571 82.86%
+    );
+  }
+
+  .hourlyTemp h2 {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding-top: 0.65rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .content {
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+  }
+
+  .card {
+    flex: 0 0 15%;
+    max-width: 15%;
+    aspect-ratio: 1 / 1.2;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #4f7ff9 0%, #46609f 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    padding: 0.25rem;
+  }
+
+  .card img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain; 
+    margin-bottom: 0.25rem;
+  }
+
+  .temp {
+    padding-top: 0.25rem;
+    font-size: clamp(0.5rem, 1.5vw, 0.9rem);
+    color: white;
+    font-weight: 500;
+  }
+
+  .time {
+    font-size: clamp(0.4rem, 1vw, 0.8rem);
+    color: white;
+    font-weight: 500;
+  }
+}
