@@ -62,7 +62,7 @@
 
   .hourlyWind {
     height: auto;
-    min-height: 140px;
+    min-height: 110px;
     border-radius: 1.25rem;
     background: linear-gradient(
       219deg,
