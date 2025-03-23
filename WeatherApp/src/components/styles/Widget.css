@@ -78,10 +78,8 @@
 
   font-weight: 500;
 }
-
 @media screen and (max-width: 700px) {
   .widget_container {
-    display: flex;
     padding: 1rem;
     height:37%;
   }
@@ -95,7 +93,6 @@
       #2a4ca4 50%,
       #1d3571 82.86%
     );
-    display: flex;
   }
   
   .graphs {
@@ -156,10 +153,20 @@
     font-weight: 500;
     font-size: clamp(0.75rem, 2vw, 1rem);
   }
+
+  .extraCard img {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 0.5rem;
+  }
+  
+  
   
   .extraCard p {
     color: white;
     font-size: clamp(0.5rem, 1.4vw, 1.5rem);
     font-weight: 500;
   }
+
+  
 }

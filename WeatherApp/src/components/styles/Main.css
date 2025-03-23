@@ -105,8 +105,8 @@
   }
 
   .weather img {
-    width: 56px;
-    height: 56px;
+    width: 100px;
+    height: 100px;
   }
 
   .weatherText {
