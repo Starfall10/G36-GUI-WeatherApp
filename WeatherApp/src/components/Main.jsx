@@ -89,7 +89,7 @@ const Main = ({ city, weatherData }) => {
             </div>
           </>
         ) : (
-          <p>{t('loading_weather...')}</p>
+          <p>{t('loading_weather')}</p>
         )}
       </div>
     </div>
