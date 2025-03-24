@@ -14,6 +14,7 @@ const HourlyTemp = ({ weatherData }) => {
     !weatherData.hourlyTemperature ||
     !weatherData.hourlyTime
   ) {
+    
     return <p>Loading hourly forecast...</p>;
   }
 

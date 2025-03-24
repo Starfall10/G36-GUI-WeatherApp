@@ -3,6 +3,7 @@
     "change_language": "Cambiar idoma",
     "fetching_time": "Obteniendo la hora...",
     "loading_weather": "Cargando datos meteorológicos...",
+    "loading": "Cargando pronóstico por hora...",
     "temperature" : "{{value}}°C",
     "loading_location": "Obteniendo la ubicación...",
     "hourly_forecast": "Pronóstico por hora",

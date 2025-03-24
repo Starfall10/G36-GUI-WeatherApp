@@ -3,6 +3,7 @@
     "change_language": "Changer de langue",
     "fetching_time": "Récuperation de I'heure ...",
     "loading_weather": "Chargement des données méteorologiques...",
+    "loading": "Chargement des prévisions horaires...",
     "temperature" : "{{value}}°C",
     "loading_location": "Récuperation de la localisation...",
     "hourly_forecast": "Prévisions horaires",
