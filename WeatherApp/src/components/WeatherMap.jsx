@@ -17,8 +17,9 @@ const ChangeMapView = ({ coords }) => {
 
 const WeatherLegend = () => {
   const map = useMap();
-  const {t} = useTranslation(); // initialise the translation to manage the text change using the function 't'
+  const { t } = useTranslation(); // initialise the translation to manage the text change using the function 't'
 
+  // create legend for the map
   useEffect(() => {
     const legend = L.control({ position: "bottomleft" });
 
@@ -26,12 +27,24 @@ const WeatherLegend = () => {
       const div = L.DomUtil.create("div", "info legend");
       div.innerHTML = `
         <h4>${t("map.mtemperature")}(°C)</h4>
-        <div class="legend-item"><span style="background-color: #0000FF"></span> ${t("map.verycold")}</div>
-        <div class="legend-item"><span style="background-color: #00FFFF"></span> ${t("map.cold")}</div>
-        <div class="legend-item"><span style="background-color: #00FF00"></span> ${t("map.mild")}</div>
-        <div class="legend-item"><span style="background-color: #FFFF00"></span> ${t("map.warm")}</div>
-        <div class="legend-item"><span style="background-color: #FF7F00"></span> ${t("map.hot")}</div>
-        <div class="legend-item"><span style="background-color: #FF0000"></span> ${t("map.veryHot")}</div>
+        <div class="legend-item"><span style="background-color: #0000FF"></span> ${t(
+          "map.verycold"
+        )}</div>
+        <div class="legend-item"><span style="background-color: #00FFFF"></span> ${t(
+          "map.cold"
+        )}</div>
+        <div class="legend-item"><span style="background-color: #00FF00"></span> ${t(
+          "map.mild"
+        )}</div>
+        <div class="legend-item"><span style="background-color: #FFFF00"></span> ${t(
+          "map.warm"
+        )}</div>
+        <div class="legend-item"><span style="background-color: #FF7F00"></span> ${t(
+          "map.hot"
+        )}</div>
+        <div class="legend-item"><span style="background-color: #FF0000"></span> ${t(
+          "map.veryHot"
+        )}</div>
       `;
       return div;
     };
@@ -45,6 +58,7 @@ const WeatherLegend = () => {
   return null;
 };
 
+// full screen control for the map
 const FullscreenControl = () => {
   const map = useMap();
 
@@ -59,8 +73,10 @@ const FullscreenControl = () => {
 
 const WeatherMap = ({ city }) => {
   const [coords, setCoords] = useState([51.505, -0.09]); // Default to London
+  // eslint-disable-next-line no-unused-vars
   const [overlay, setOverlay] = useState("temp_new"); // Default: Temperature
 
+  // get the coordinates of the city from the map API
   useEffect(() => {
     const fetchCoordinates = async () => {
       if (!city) return;
@@ -86,6 +102,7 @@ const WeatherMap = ({ city }) => {
       <WeatherLegend />
       <FullscreenControl />
 
+      {/* For future implementation of the overlay buttons */}
       {/* <div className="overlay-toggle">
         <button onClick={() => setOverlay("wind_new")}>Wind Speed</button>
         <button onClick={() => setOverlay("precipitation_new")}>
