@@ -54,7 +54,7 @@ const Header = ({ onSearch }) => {
       <div className="change">
         {/* button for language change at the header and translate text for change language */}
         <button className="change-btn" onClick={() => setModalOpen(true)}>
-          🌍 {t("change_language")}
+          🌍 <span className="lan-text">{t("change_language")}</span>
         </button>
         <LanguageModal
           isOpen={isModalOpen}
