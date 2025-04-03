@@ -45,15 +45,7 @@ const HourlyWind = ({ weatherData }) => {
             .slice(validStartIndex, validStartIndex + 6)
             .map((speed, index) => (
               <div className="card" key={index}>
-                <img
-                  src={windIcon}
-                  alt="Wind Icon"
-                  className="windIcon"
-                  style={{
-                    width: "75px",
-                    height: "75px",
-                  }}
-                />
+                <img src={windIcon} alt="Wind Icon" className="windIcon" />
                 <div className="speed">{Math.round(speed)} km/h</div>
                 <div className="time">
                   {new Date(
