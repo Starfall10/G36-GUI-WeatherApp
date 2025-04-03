@@ -85,15 +85,15 @@ To get started with the project locally, follow these steps:
 ```bash
 git clone https://github.com/your-username/G36-GUI-WeatherApp.git
 ```
-### 2. Navigate to the correct directory
+### 2. Install all dependencies (from package.json) in the terminal:
 
 ```bash
-cd G36-GUI-WeatherApp
-cd WeatherApp
+npm i
 ```
-### 3. Install the correct npm package
+### 3. Navigate to the WeatherApp Folder and install all the dependancies again:
 
 ```bash
+cd WeatherApp
 npm install
 ```
 
@@ -102,7 +102,7 @@ npm install
 ```bash
 npm run dev
 ```
-This will start the Vite development server. Open your browser and go to http://localhost:5137 to view the app.
+This will start the Vite development server. Open your browser and view the weather app.
 
 
 
