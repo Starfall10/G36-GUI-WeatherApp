@@ -69,21 +69,21 @@
 .extraCard h1 {
   color: white;
   font-weight: 500;
-  font-size: clamp(0.5rem, 2vw, 1.5rem);
+  font-size: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .extraCard p {
   color: white;
-  font-size: clamp(0.5rem, 2vw, 2rem);
+  font-size: clamp(0.5rem, 1.7vw, 2rem);
 
   font-weight: 500;
 }
 @media screen and (max-width: 700px) {
   .widget_container {
     padding: 1rem;
-    height:37%;
+    height: 37%;
   }
-  
+
   .widget {
     height: 100%;
     border-radius: 1.25rem;
@@ -94,13 +94,13 @@
       #1d3571 82.86%
     );
   }
-  
+
   .graphs {
     height: 75%;
     width: 75%;
     padding: 1rem;
   }
-  
+
   .graph_container {
     display: flex;
     border-radius: 1.25rem;
@@ -117,7 +117,7 @@
     gap: 1rem;
     width: 100%;
   }
-  
+
   .extra {
     width: 100%;
     display: flex;
@@ -127,7 +127,7 @@
     align-items: center;
     gap: 1rem;
   }
-  
+
   .extraCard {
     border-radius: 1.25rem;
     background: linear-gradient(
@@ -147,7 +147,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+
   .extraCard h1 {
     color: white;
     font-weight: 500;
@@ -159,14 +159,10 @@
     height: 32px !important;
     margin-right: 0.5rem;
   }
-  
-  
-  
+
   .extraCard p {
     color: white;
     font-size: clamp(0.5rem, 1.4vw, 1.5rem);
     font-weight: 500;
   }
-
-  
 }

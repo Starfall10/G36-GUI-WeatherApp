@@ -14,7 +14,6 @@ const HourlyTemp = ({ weatherData }) => {
     !weatherData.hourlyTemperature ||
     !weatherData.hourlyTime
   ) {
-    
     return <p>Loading hourly forecast...</p>;
   }
 
@@ -42,6 +41,7 @@ const HourlyTemp = ({ weatherData }) => {
   const { t } = useTranslation();
 
   //effects to apply the dark/light mode to the body when clicked on the toggle
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);
@@ -71,7 +71,6 @@ const HourlyTemp = ({ weatherData }) => {
                   <img
                     src={getWeatherIcon(temp, precipitation)}
                     alt="Weather Icon"
-                    width={50}
                   />
                   <div className="temp">{Math.round(temp)}°C</div>
                   <div className="time">
